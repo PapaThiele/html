@@ -1,0 +1,31 @@
+<a href="real-image.png" ><img src="thumbnail.png"><a>
+
+<a href="0103.jpg"  target="_blank">
+<img src="0103.jpg" height=50 width=50></a>
+
+ls *.jpg >>ws
+
+for H in `cat ws`; do echo "<a href=$H  target=_blank><img src=$H style= width: 25%;></a>">> *.html; done
+
+
+:%s/href=/href="/g
+:%s/jpg/jpg"/g
+:%s/_blank/"_blank"/g
+:%s/src=/src="/g
+:%s/style=/style="/g
+:%s/%/%"/g
+
+	</body>
+	</font>
+	</html>
+
+
+<html>
+<body bgcolor="black" text="#ffffff" link="#ccffff" vlink="#ccffff">
+<font face="Arial Narrow" size="5" color="white">
+<i>Click on thumbnails to view full sized image in new tab</i>
+<br><br>
+<font face="Garramond" size="4" color="silver">
+
+fr33w3b4m3
+
